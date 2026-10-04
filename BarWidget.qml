@@ -140,16 +140,16 @@ BarWidget {
     triggerMode: "hover"
     margin: Style.space(10)
     padding: 0
-    borderColor: Qt.rgba(Color.foreground.r, Color.foreground.g, Color.foreground.b, 0.14)
+    borderColor: "transparent"
     contentWidth: popup.fittedContentWidth(Style.space(300))
     contentHeight: popup.fittedContentHeight(cardContent.childrenRect.height + Style.space(24) + 2)
 
     Rectangle {
       anchors.fill: parent
-      anchors.margins: 1
+      anchors.margins: 0
       radius: Style.space(26)
       color: Qt.rgba(Color.background.r, Color.background.g, Color.background.b, 0.92)
-      border.width: 1
+      border.width: 0
       border.color: Qt.rgba(Color.foreground.r, Color.foreground.g, Color.foreground.b, 0.14)
 
       Column {
