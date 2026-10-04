@@ -3,6 +3,7 @@ import Quickshell
 import Quickshell.Services.Mpris
 import qs.Ui
 import qs.Commons
+import "."
 
 BarWidget {
   id: root
@@ -131,7 +132,7 @@ BarWidget {
     }
   }
 
-  PopupCard {
+  TransparentPopupCard {
     id: popup
     anchorItem: root
     bar: root.bar
@@ -148,9 +149,18 @@ BarWidget {
       anchors.fill: parent
       anchors.margins: 0
       radius: Style.space(26)
-      color: Qt.rgba(Color.background.r, Color.background.g, Color.background.b, 0.92)
-      border.width: 0
-      border.color: Qt.rgba(Color.foreground.r, Color.foreground.g, Color.foreground.b, 0.14)
+      gradient: Gradient {
+        GradientStop {
+          position: 0.0
+          color: Qt.rgba(0.10, 0.11, 0.15, 0.98)
+        }
+        GradientStop {
+          position: 1.0
+          color: Qt.rgba(0.055, 0.06, 0.085, 0.98)
+        }
+      }
+      border.width: 1
+      border.color: Qt.rgba(1, 1, 1, 0.08)
 
       Column {
         id: cardContent
