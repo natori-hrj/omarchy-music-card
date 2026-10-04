@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "natori.music-card",
+  "name": "Omarchy Music Card",
+  "version": "0.1.0",
+  "author": "Natori",
+  "description": "A polished MPRIS music player card for the Omarchy bar.",
+  "kinds": [
+    "service",
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "service": "MediaService.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Media Card",
+    "category": "Media",
+    "allowMultiple": false,
+    "defaultSection": "center"
+  }
+}
